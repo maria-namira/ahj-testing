@@ -43,5 +43,5 @@ describe('checkPaySystem проверяет переданное значени�
   ])(('Если в %s передаём %d должен вернуть %s'), (_, input, expected) => {
     expect(validator.checkPaySystem(input)).toBe(expected);
   });
-  
 });
+

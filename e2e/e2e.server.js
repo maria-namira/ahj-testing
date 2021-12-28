@@ -1,16 +1,17 @@
 /* eslint-отключить импорт/нет-нерешенные */
 /* eslint-отключить импорт/нет-посторонние зависимости */
 // eslint-отключить-импорт в следующей строке/нет-посторонние-зависимости
-const webpack = требуется('веб-пакет');
-const WebpackDevServer = требуется('webpack-dev-сервер');
- конфигурация const = требуется('../webpack.dev');
 
-const сервер = новый WebpackDevServer(webpack(конфигурация), {});
-сервер.прослушивание(9000, 'локальный хост', (ошибка) =>> {
-  если (ошибка) {
-    Возврат;
+nst webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const config = require('../webpack.config');
+
+const server = new WebpackDevServer(webpack(config), {});
+server.listen(9000, 'localhost', (err) => {
+  if (err) {
+    return;
   }
-  если (обработать.отправить) {
-    обработать.отправить("ок");
+  if (process.send) {
+    process.send('ok');
   }
 });
