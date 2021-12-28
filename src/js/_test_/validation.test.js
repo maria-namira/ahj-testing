@@ -44,4 +44,3 @@ describe('checkPaySystem проверяет переданное значени�
     expect(validator.checkPaySystem(input)).toBe(expected);
   });
 });
-
