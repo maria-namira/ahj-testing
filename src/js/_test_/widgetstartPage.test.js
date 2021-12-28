@@ -1,4 +1,4 @@
-import WidgetStartPage from '../WidgetStartPage';
+import WidgetStartPage from  '../WidgetStartPage';
 
 describe('Проверка отрисовки стартовой страницы', () => {
   const widget = new WidgetStartPage();
