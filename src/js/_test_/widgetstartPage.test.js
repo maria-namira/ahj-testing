@@ -26,3 +26,4 @@ describe('Проверка отрисовки стартовой страниц�
     expect(() => widget.checkBinding()).toThrowError(new Error('Widget is not bind to DOM'));
   });
 });
+
