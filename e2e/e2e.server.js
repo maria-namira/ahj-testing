@@ -2,7 +2,7 @@
 /* eslint-отключить импорт/нет-посторонние зависимости */
 // eslint-отключить-импорт в следующей строке/нет-посторонние-зависимости
 
-nst webpack = require('webpack');
+const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('../webpack.config');
 
