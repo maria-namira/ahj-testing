@@ -1,10 +1,9 @@
-/* eslint-отключить импорт/нет-нерешенные */
-/* eslint-отключить импорт/нет-посторонние зависимости */
-// eslint-отключить-импорт в следующей строке/нет-посторонние-зависимости
-
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-extraneous-dependencies */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-const config = require('../webpack.config');
+const config = require('../webpack.dev');
 
 const server = new WebpackDevServer(webpack(config), {});
 server.listen(9000, 'localhost', (err) => {
