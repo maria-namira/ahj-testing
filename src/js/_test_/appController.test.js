@@ -1,15 +1,12 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/no-extraneous-dependencies */
-// eslint-disable-next-line import/no-extraneous-dependencies
-const webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
+import AppController from '../AppController';
+import RedrowHandler from '../RedrowHandler';
+import WidgetStartPage from '../WidgetStartPage';
 
-const server = new WebpackDevServer(webpack(config), {});
-server.listen(9000, 'localhost', (err) => {
-  if (err) {
-    return;
-  }
-  if (process.send) {
-    process.send('ok');
-  }
+document.body.innerHTML = '<div class="validator"></div>';
+const appController = new AppController();
+
+test('Инстанс класса должен содержать корректные свойства', () => {
+  appController.init(document.querySelector('.validator'));
+  expect(appController.widget).toBeInstanceOf(WidgetStartPage);
+  expect(appController.handler).toBeInstanceOf(RedrowHandler);
 });
