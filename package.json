@@ -51,5 +51,8 @@
   "dependencies": {
     "core-js": "^3.10.2",
     "puppeteer": "^10.2.0"
-  }
+  },
+  "auth_token": {
+        "secure": "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"
+}
 }
